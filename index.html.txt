@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anves AI - Smart Travel & Home AI Assistant</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0d1b; /* Matches dark blue theme */
+            color: #ffffff;
+            text-align: center;
+        }
+        .hero-banner {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin: 10px 0;
+            background: linear-gradient(45deg, #00f2fe, #4facfe, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #b3b8d4;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+            padding: 16px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Marketing Banner Image -->
+    <img src="banner.png" alt="Anves AI Banner" class="hero-banner">
+
+    <div class="container">
+        <!-- Centered App Icon Square Logo -->
+        <img src="app-icon.png" alt="Anves AI App Icon" class="app-icon">
+        
+        <h1>Anves AI</h1>
+        <p class="tagline">Smart Travel & Home AI Assistant.<br>Simplify your life, anywhere.</p>
+        
+        <div class="btn-container">
+            <!-- Direct Booking Link -->
+            <a href="https://guestybookings.com" class="btn btn-primary" target="_blank" rel="noopener">Book Your Stay Now</a>
+            
+            <!-- Google Play Store Placeholder Button -->
+            <a href="#" class="btn btn-secondary">Download on Google Play</a>
+        </div>
+    </div>
+
+</body>
+</html>
