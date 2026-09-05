@@ -50,6 +50,7 @@
             flex-direction: column;
             gap: 15px;
             align-items: center;
+            margin-bottom: 60px;
         }
         .btn {
             display: inline-block;
@@ -61,44 +62,107 @@
             color: #fff;
             text-decoration: none;
             border-radius: 50px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
         }
-        .btn-primary {
-            background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+
+        /* --- "How It Works" Section Styles --- */
+        .how-it-works {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #00f2fe, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
         }
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        .step-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(168, 85, 247, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .step-number {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #00f2fe;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .step-card p {
+            font-size: 1rem;
+            color: #b3b8d4;
+            line-height: 1.6;
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Marketing Banner Image -->
-    <img src="banner.png" alt="Anves AI Banner" class="hero-banner">
+    <!-- Banner Image -->
+    <img src="banner.jpg" alt="Anves AI Banner" class="hero-banner">
 
     <div class="container">
-        <!-- Centered App Icon Square Logo -->
+        <!-- Corrected App Icon Image Source -->
         <img src="app-icon.png" alt="Anves AI App Icon" class="app-icon">
         
         <h1>Anves AI</h1>
-        <p class="tagline">Your Property’s 24/7 Digital Concierge.<br>Simplify guest support, anywhere. Anves AI handles real-time rental questions on behalf of hosts, giving travelers instant answers about the home they are renting.</p>
+        <div class="tagline">Your Property's 24/7 Digital Concierge. Simplify guest support, anywhere. Anves AI handles real-time rental questions on behalf of hosts, giving travelers instant answers about the home they are renting.</div>
         
         <div class="btn-container">
-            <!-- Direct Booking Link -->
-            <a href="https://selinavacationrentals.guestybookings.com/" class="btn btn-primary" target="_blank" rel="noopener">Book Your Stay Now</a>
-            
-            <!-- Google Play Store Placeholder Button -->
-            <a href="#" class="btn btn-secondary">Download on Google Play</a>
+            <a href="#" class="btn">Book Your Stay Now</a>
+            <a href="#" class="btn">Download on Google Play</a>
         </div>
     </div>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-grid">
+            
+            <!-- Step 1 -->
+            <div class="step-card">
+                <span class="step-number">[ 1. Host Sync ]</span>
+                <p>Hosts sync their property guides, custom house rules, appliance instructions, and Wi-Fi networks effortlessly into Anves AI.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <span class="step-number">[ 2. Guest Check-In ]</span>
+                <p>Upon checking in, travelers access their property’s dedicated interface to manage their accommodation logistics smoothly.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <span class="step-number">[ 3. Instant Support ]</span>
+                <p>Guests ask questions naturally. The AI acts on behalf of the host, rendering accurate property details immediately.</p>
+            </div>
+
+        </div>
+    </section>
 
 </body>
 </html>
