@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Selina, Director</title>
+    <style>
+        :root {
+            --primary: #111827;
+            --secondary: #4b5563;
+            --bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--primary);
+            background-color: var(--bg);
+            line-height: 1.6;
+            padding: 4rem 2rem;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-container {
+                grid-template-columns: 350px 1fr;
+            }
+        }
+
+        .image-wrapper {
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+            background-color: #f3f4f6;
+            display: block;
+        }
+
+        .title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-divider {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .meta-item h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-item p {
+            font-size: 0.95rem;
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <!-- Visual Column -->
+        <div class="image-wrapper">
+            <img src="headshot.png" alt="Selina, Director" class="profile-img">
+        </div>
+
+        <!-- Text Column -->
+        <div>
+            <p class="title">Director</p>
+            <h1>Selina</h1>
+            
+            <p class="bio-text">
+                Selina directs a premier real estate portfolio, backed by over 7 years of investment strategy and asset management experience. As an established Airbnb Superhost, she specializes in driving operational excellence and high-yield asset allocation across short-term vacation rentals and long-term residential holdings.
+            </p>
+            
+            <p class="bio-text">
+                Prior to focusing on real estate infrastructure, Selina spent a decade driving large-scale enterprise initiatives as a Technical Program Manager at Silicon Valley leaders including Cisco and NetApp. 
+            </p>
+
+            <!-- Corporate Footnote Style Metrics -->
+            <div class="meta-divider">
+                <div class="meta-item">
+                    <h3>Education</h3>
+                    <p>MS, Computer Science (The University of Texas at Dallas)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
