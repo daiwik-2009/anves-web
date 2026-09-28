@@ -5,151 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Selina, Director</title>
     <style>
-        :root {
-            --primary: #111827;
-            --secondary: #4b5563;
-            --bg: #ffffff;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0b0d1b; /* Matches dark blue theme */
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.6;
+        padding: 4rem 2rem;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--primary);
-            background-color: var(--bg);
-            line-height: 1.6;
-            padding: 4rem 2rem;
-        }
+    .about-container {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 1000px;
+        margin: 0 auto; /* Fixed invalid '10 auto' and centered */
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
 
+    @media (min-width: 768px) {
         .about-container {
-            border-top: 1px solid #ccc;
-            max-width: 1000px;
-            margin: 10 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
+            grid-template-columns: 350px 1fr;
+            text-align: left; /* Aligns text cleanly next to the profile image on desktop */
         }
+    }
 
-        @media (min-width: 768px) {
-            .about-container {
-                grid-template-columns: 350px 1fr;
-            }
-        }
+    .image-wrapper {
+        position: relative;
+    }
 
-        .image-wrapper {
-            position: relative;
-        }
+    .profile-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 24px; /* Matches app-icon rounding */
+        box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4); /* Neon purple shadow */
+        background-color: rgba(255, 255, 255, 0.03);
+        display: block;
+    }
 
-        .profile-img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 4px;
-            background-color: #f3f4f6;
-            display: block;
-        }
+    .title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #00f2fe; /* Neon cyan step-number color */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
 
-        .title {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--secondary);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(45deg, #00f2fe, #4facfe, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
+    .bio-text {
+        font-size: 1.1rem;
+        color: #b3b8d4; /* Main typography theme color */
+        margin-bottom: 1.5rem;
+    }
 
-        .bio-text {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-        }
+    /* Meta section converted into a clean matching card style */
+    .meta-divider {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 30px;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+        transition: transform 0.3s, border-color 0.3s;
+    }
 
-        .meta-divider {
-            border-top: 1px solid #e5e7eb;
-            padding-top: 1.5rem;
-            margin-top: 2rem;
-        }
+    .meta-divider:hover {
+        transform: translateY(-5px);
+        border-color: rgba(168, 85, 247, 0.4);
+        background: rgba(255, 255, 255, 0.05);
+    }
 
-        .meta-item h3 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
-        }
+    .meta-item h3 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #00f2fe;
+        margin-bottom: 0.25rem;
+    }
 
-        .meta-item p {
-            font-size: 0.95rem;
-            color: var(--secondary);
-        }
-    </style>
+    .meta-item p {
+        font-size: 0.95rem;
+        color: #b3b8d4;
+    }
+</style>
 </head>
 <body>
 
-    <div class="about-container">
-        <!-- Visual Column -->
-        <div class="image-wrapper">
-            <img src="headshot.png" alt="Selina, Director" class="profile-img">
-        </div>
+    <main class="profiles-wrapper">
+        <!-- Selina's Profile -->
+        <div class="about-container">
+            <!-- Visual Column -->
+            <div class="image-wrapper">
+                <img src="headshot.png" alt="Selina, Director" class="profile-img">
+            </div>
 
-        <!-- Text Column -->
-        <div>
-            <p class="title">Director</p>
-            <h1>Selina</h1>
-            
-            <p class="bio-text">
-                Selina directs a premier real estate portfolio, backed by over 7 years of investment strategy and asset management experience. As an established Airbnb Superhost, she specializes in driving operational excellence and high-yield asset allocation across short-term vacation rentals and long-term residential holdings.
-            </p>
-            
-            <p class="bio-text">
-                Prior to focusing on real estate infrastructure, Selina spent a decade driving large-scale enterprise initiatives as a Technical Program Manager at Silicon Valley leaders including Cisco and NetApp. 
-            </p>
+            <!-- Text Column -->
+            <div class="text-column">
+                <p class="title">Director</p>
+                <h1>Selina</h1>
+                
+                <p class="bio-text">
+                    Selina directs a premier real estate portfolio, backed by over 7 years of investment strategy and asset management experience. As an established Airbnb Superhost, she specializes in driving operational excellence and high-yield asset allocation across short-term vacation rentals and long-term residential holdings.
+                </p>
+                
+                <p class="bio-text">
+                    Prior to focusing on real estate infrastructure, Selina spent a decade driving large-scale enterprise initiatives as a Technical Program Manager at Silicon Valley leaders including Cisco and NetApp. 
+                </p>
 
-            <!-- Corporate Footnote Style Metrics -->
-            <div class="meta-divider">
-                <div class="meta-item">
-                    <h3>Education</h3>
-                    <p>MS, Computer Science (The University of Texas at Dallas)</p>
+                <!-- Corporate Footnote Style Metrics -->
+                <div class="meta-divider">
+                    <div class="meta-item">
+                        <h3>Education</h3>
+                        <p>MS, Computer Science (The University of Texas at Dallas)</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Daiwik's Profile -->
-    <div class="about-container">
-        <!-- Visual Column -->
-        <div class="image-wrapper">
-            <img src="daiwik.png" alt="Daiwik, Co-Director" class="profile-img">
+        <!-- Daiwik's Profile -->
+        <div class="about-container">
+            <!-- Visual Column -->
+            <div class="image-wrapper">
+                <img src="daiwik.png" alt="Daiwik, Engineering" class="profile-img">
+            </div>
+
+            <!-- Text Column -->
+            <div class="text-column">
+                <p class="title">Engineering</p>
+                <h1>Daiwik</h1>
+                
+                <p class="bio-text">
+                    Daiwik engineers modern, production-grade applications running cross-platform architecture frameworks integrated directly with intelligent server solutions.
+                </p>
+                
+                <p class="bio-text">
+                    Worked on mobile applications using cross-platform features in Flutter alongside data sync backend service using Firebase. Experience building chatbots using foundational LLMs including OpenAI and Gemini.
+                </p>
+
+                <!-- Added for symmetric layout styling matching Selina's section -->
+                <div class="meta-divider">
+                    <div class="meta-item">
+                        <h3>Core Stack</h3>
+                        <p>Flutter, Firebase, OpenAI API, Gemini API</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Text Column -->
-        <div>
-            <p class="title">Engineering</p>
-            <h1>Daiwik</h1>
-            
-            <p class="bio-text">
-                Daiwik engineers modern, production-grade applications running cross-platform architecture frameworks integrated directly with intelligent server solutions.
-            </p>
-            
-            <p class="bio-text">
-                Worked on mobile applications using cross-platform features in Flutter alongside data sync backend service using Firebase. Experience building chatbots using foundational LLMs including OpenAI and Gemini.
-            </p>
-
-        </div>
-    </div>
-
+    </main>
 
 </body>
 </html>
